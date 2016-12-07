@@ -1,0 +1,70 @@
+.header{
+    composes:hgBg from './variable.css';
+}
+.topBar{
+  height: 24px;
+  background-color: #000;
+}
+.container{
+  position: relative;
+  margin:0 auto;
+  width:80%;
+}
+.logo{
+  display:inline-block;
+  margin:0 0 .3em 0;
+  padding-right:.83em;
+  width: 173px;
+}
+.nav{
+  position: absolute;
+  display:inline-block;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  bottom: -10px;
+  padding-left:2em;
+  width: 80%;
+  background-color: #fff;
+      z-index: 99;
+}
+.nav li{
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+}
+.btnLogin{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 152px;
+  height: 100%;
+  text-align: center;
+  line-height: 3em;
+  composes:headButton from './variable.css'
+}
+/*
+composes is only allowed when selector is single
+ */
+.rect{
+
+}
+.rect::before{
+  position: absolute;
+  content: '';
+  top: .35em;
+  left: -.35em;
+  border-color: #3337bd !important;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  width: 16px;
+  height: 16px;
+}
+.active{
+  composes:rect;
+}
+.active a{
+    color: #3337bd;
+}

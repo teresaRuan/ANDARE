@@ -1,0 +1,77 @@
+body,html{
+  width: 100%;
+  height: 100%;
+}
+.bg{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.content{
+  position: relative;;
+  top: 50%;
+  transform: translateY(-50%);
+  margin:0 auto;;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 60%;
+  max-width: 550px;
+  box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.main{
+  padding: 40px 30px 55px 30px;
+}
+.tip{
+  color: #666;
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+.input{
+  display: block;
+  margin-top: 25px;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+  width: 100%;
+  color: #999;
+  padding-bottom:15px;
+}
+.btn{
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  line-height: 50px;
+}
+.register{
+  padding-left: 20px;
+  text-align:left;
+  background-color: #e8e9ee;
+  color: #a1a5b2 !important;
+}
+.login{
+  padding-right: 20px;
+  text-align: right;
+  background-color: #2d3b55;
+  color: #fff !important;
+}
+
+.register_btn{
+  display: block;
+  margin: 0 auto;
+    width: 80%;
+    color: #fff!important;
+    text-align: center;
+    background-color: #fb3954;
+    line-height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}

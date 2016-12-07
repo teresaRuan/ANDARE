@@ -1,0 +1,16 @@
+.footer{
+  composes:hgBg from './variable.css';
+  height: 50px;
+  line-height: 50px;
+  font-size: 13px;
+}
+.footer a{
+  color: #fff;
+}
+.nav li{
+  float: left;
+  margin-right:3.5em;
+}
+.copy{
+  composes:footCopy from './variable.css';
+}

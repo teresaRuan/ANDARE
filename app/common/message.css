@@ -1,0 +1,51 @@
+.container{
+  padding-top: 20px;
+  background-color: #fff;
+}
+.reply{
+  margin-top: 20px;
+  margin-left: 80px;
+  width: 70%;
+  min-height: 50px;
+  resize: none;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+
+}
+.send{
+  display: block;
+position: relative;
+left: 68%;
+background-color: #E0D8B2;
+color: #839E83;
+padding: .5em;
+width: 80px;
+text-align: center;
+font-size: 14px;
+border-radius: 5px;
+}
+.item{
+  margin-top:35px;
+  overflow: hidden;
+}
+.icon{
+  float: left;
+  vertical-align: top;
+  width: 50px;
+  height:50px;
+  border-radius:50px;
+  overflow: hidden;
+}
+.content{
+  float: left;
+  width: 70%;
+  margin-left:30px;
+}
+.name{
+  font-size: 12.5px;
+}
+.comment{
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: #898484;
+}

@@ -1,0 +1,15 @@
+.container{
+	  padding:0 30px;
+		width: 74%;
+}
+.body{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	z-index: -1;
+	background-color: #fff;
+}
+.left{
+	box-sizing: border-box;
+	background-color: #ecece2;
+	border-radius: 3px;
+}

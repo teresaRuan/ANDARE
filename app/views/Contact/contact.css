@@ -1,0 +1,47 @@
+.container{
+  padding-top: 70px;
+  min-height: 500px;
+  text-align: center;
+  background-color: #ECFBF9;
+
+}
+.container p{
+  text-align: left;
+}
+.top{
+  margin: 0 auto;
+  width:60%;
+}
+.top p{
+  margin-top:10px;
+  margin-bottom: 50px;
+  .line-height: 1.5;
+}
+.bottom ul{
+  display: flex;
+  margin: 40px auto;
+  justify-content: space-around;
+  width: 80%;
+}
+.bottom li{
+  padding-right: 30px;
+  line-height: 1.2;
+  flex: 1;
+}
+.title{
+  margin-bottom: 20px;
+  text-align: left;
+}
+.line{}
+.line::after{
+  display: block;
+  width: 10px;
+  height: 3px;
+  background-color: #000;
+}
+.title{
+  composes:line;
+}
+.strong{
+  font-weight: bold;
+}
