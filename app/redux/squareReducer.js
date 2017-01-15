@@ -13,7 +13,7 @@ export default function messages(state = initialState, action) {
             const message = action.message;
             return {...state,
                 messages: [...state.messages, {
-                    type: types.USER_MESSAGE,
+                    type: types.RECEIVE_MESSAGE,
                     text: message.text,
                     userName: message.userName
                 }]

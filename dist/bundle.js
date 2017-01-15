@@ -23629,7 +23629,7 @@
 	            var message = action.message;
 	            return _extends({}, state, {
 	                messages: [].concat(_toConsumableArray(state.messages), [{
-	                    type: types.USER_MESSAGE,
+	                    type: types.RECEIVE_MESSAGE,
 	                    text: message.text,
 	                    userName: message.userName
 	                }])
@@ -32628,7 +32628,6 @@
 	    _createClass(Square, [{
 	        key: 'render',
 	        value: function render() {
-	            console.log(this.props);
 	            return _react2.default.createElement(_Chat2.default, this.props);
 	        }
 	    }]);
@@ -32673,7 +32672,7 @@
 
 	var _MessageComposer2 = _interopRequireDefault(_MessageComposer);
 
-	var _MessageItem = __webpack_require__(317);
+	var _MessageItem = __webpack_require__(318);
 
 	var _MessageItem2 = _interopRequireDefault(_MessageItem);
 
@@ -32777,7 +32776,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _square = __webpack_require__(318);
+	var _square = __webpack_require__(317);
 
 	var _square2 = _interopRequireDefault(_square);
 
@@ -32828,6 +32827,13 @@
 
 /***/ },
 /* 317 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"icon":"square__icon--2uzuP variable__message_icon--3m5eZ","user_message":"square__user_message--14IbM","fadeIn":"square__fadeIn--2GJBX","container":"square__container--1KWen","icon_box":"square__icon_box--354VO","content":"square__content--dNGQE","input_message":"square__input_message--3b2ys","username":"square__username--2Q21d","system_message":"square__system_message--Ofdm2"};
+
+/***/ },
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32846,7 +32852,7 @@
 
 	var types = _interopRequireWildcard(_ActionTypes);
 
-	var _square = __webpack_require__(318);
+	var _square = __webpack_require__(317);
 
 	var _square2 = _interopRequireDefault(_square);
 
@@ -32874,13 +32880,17 @@
 	        value: function render() {
 	            var message = this.props.message;
 
-	            console.log(this.props);
 	            switch (message.type) {
-	                case types.USER_MESSAGE:
-	                    var userNameColor = this._getUserNameColor(message.userName);
+	                case types.SYSTEM_MESSAGE:
 	                    return _react2.default.createElement(
 	                        'li',
-	                        { className: _square2.default.user_message },
+	                        { className: _square2.default.system_message },
+	                        message.text
+	                    );
+	                default:
+	                    return _react2.default.createElement(
+	                        'li',
+	                        { className: message.type == types.RECEIVE_MESSAGE ? _square2.default.user_message : _square2.default.user_message + ' right' },
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: _square2.default.container },
@@ -32905,41 +32915,7 @@
 	                            )
 	                        )
 	                    );
-	                case types.SYSTEM_MESSAGE:
-	                    return _react2.default.createElement(
-	                        'li',
-	                        { className: _square2.default.system_message },
-	                        message.text
-	                    );
-	                default:
-	                    return _react2.default.createElement(
-	                        'li',
-	                        { className: 'user-message' },
-	                        _react2.default.createElement(
-	                            'span',
-	                            { className: 'user-name', style: { color: userNameColor } },
-	                            message.userName
-	                        ),
-	                        _react2.default.createElement(
-	                            'span',
-	                            { className: 'message-body' },
-	                            message.text
-	                        )
-	                    );
 	            }
-	        }
-	    }, {
-	        key: '_getUserNameColor',
-	        value: function _getUserNameColor(userName) {
-	            var COLORS = ['#e21400', '#91580f', '#f8a700', '#f78b00', '#58dc00', '#287b00', '#a8f07a', '#4ae8c4', '#3b88eb', '#3824aa', '#a700ff', '#d300e7'];
-	            // Compute hash code
-	            var hash = 7;
-	            for (var i = 0; i < userName.length; i++) {
-	                hash = userName.charCodeAt(i) + (hash << 5) - hash;
-	            }
-	            // Calculate color
-	            var index = Math.abs(hash % COLORS.length);
-	            return COLORS[index];
 	        }
 	    }]);
 
@@ -32947,13 +32923,6 @@
 	}(_react2.default.Component);
 
 	exports.default = MessageItem;
-
-/***/ },
-/* 318 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-	module.exports = {"icon":"square__icon--2uzuP variable__message_icon--3m5eZ","user_message":"square__user_message--14IbM","fadeIn":"square__fadeIn--2GJBX","container":"square__container--1KWen","icon_box":"square__icon_box--354VO","content":"square__content--dNGQE","input_message":"square__input_message--3b2ys","username":"square__username--2Q21d","system_message":"square__system_message--Ofdm2"};
 
 /***/ },
 /* 319 */
