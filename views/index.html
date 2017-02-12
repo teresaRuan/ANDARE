@@ -9,5 +9,15 @@
   <div id="root">
   </div>
   <script src="../dist/bundle.js"></script>
+  <script>
+    ( function() {
+        var eleScript = document.createElement( 'script' );
+        var url = './public/js/app.js';
+        eleScript.src = url;
+        self.addEventListener( 'DOMContentLoaded', function() {
+            document.head.appendChild( eleScript )
+        } )
+    } )()
+</script>
 </body>
 </html>
